@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.0",
     "babel-register": "^6.26.0",
     "jsdom": "^11.2.0",
+    "lodash": "^4.17.4",
     "m3u8": "0.0.7",
     "minimist": "^1.2.0",
     "request": "^2.81.0",
