@@ -6,18 +6,26 @@ import {
     getVideoDataFromAssetId,
 } from "./utils"
 
-// const video_url = "https://videos.tva.ca/details/_5579749041001"
+import axios from "axios"
 
-const {
-    _:params,
-    o:output_filename,
-    // r:suggested_resolution,
-} = minimist(process.argv.slice(2));
-const video_url = "" + params[0];
+// axios.get("https://videos.tva.ca/page/touslescontenus")
+// .then((r) => {
+//     console.log(r.headers)
+//     // console.log(r.config)
+// })
+// // .then(r => r.data)
+// // .then((html) => {
+// //     console.log(html)
+// // })
+// .catch((err) => {
+//     console.error(err)
+// })
 
-const videoId = video_url.split("_").pop(); // Take the last part of the url
-
-getVideoDataFromAssetId("5632416053001")
+getVideoDataFromAssetId("5634980386001")
+// .then((v) => {
+//     console.log(v)
+//     // return v;
+// })
 .then(downloadVideo)
 .then(() => {
     console.log("DONE !!!");
